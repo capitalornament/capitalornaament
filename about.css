@@ -1,0 +1,95 @@
+
+body{ background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+
+}
+header{
+    background-color: rgb(5, 6, 49);
+    background-size: cover;
+    padding: 10px;
+}
+UL{
+    
+    display: flex;
+    justify-content: center;
+     align-items: center;
+}
+
+header ul li a{
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+header ul li a:hover{
+    color: brown;
+}
+
+nav ul{
+    list-style-type:none ;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li{
+    display: inline;
+    margin-right: 10px;
+}
+
+.image{
+    width: 100%;
+    align-items: center;
+    float: right;
+}
+
+.image img{
+    width: 100%;
+}
+main{
+    padding: 20px;
+    font-family: Arial;
+    font-weight: bolder;
+    font-style: normal;
+    text-transform: capitalize;
+    size: 500px;
+    text-decoration-style: wavy;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    scroll-behavior: smooth;
+
+}
+main h1{
+    color: brown;
+    font-size: 60px;
+    text-align: center;
+    size-adjust: calc(160px);
+}
+
+main p{
+    color: rgb(1, 8, 8);
+    text-align: center;
+    font-family:  Calibri,;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bolder;
+    
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    color: aliceblue;
+    font-family:'Times New Roman';
+    background-color: rgb(23, 3, 41);
+    border-top: 1px solid #ddd;
+}

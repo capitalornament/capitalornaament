@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=download whatsapp logo png&FORM=IQFRBA&id=977ACA588EF3E9A5DA097B1C9566950D5CD1F0BA";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=5746c72d518487cbJmltdHM9MTY5NTk0NTYwMCZpZ3VpZD0wZDgzNmM0NS1kN2M3LTZiZGYtMjI2MS03ZWI3ZDZkYTZhODImaW5zaWQ9NTYzMQ&ptn=3&hsh=3&fclid=0d836c45-d7c7-6bdf-2261-7eb7d6da6a82&u=a1L2ltYWdlcy9zZWFyY2g_cT1kb3dubG9hZCB3aGF0c2FwcCBsb2dvIHBuZyZGT1JNPUlRRlJCQSZpZD05NzdBQ0E1ODhFRjNFOUE1REEwOTdCMUM5NTY2OTUwRDVDRDFGMEJB&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
